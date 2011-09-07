@@ -1,0 +1,49 @@
+background yes
+use_xft yes
+xftfont Sans:size=7
+xftalpha 0.8
+update_interval 1
+total_run_times 0
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale no
+double_buffer yes
+
+own_window yes
+own_window_type override
+own_window_transparent 1
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+uppercase no
+use_spacer yes
+
+alignment top_right
+gap_x 21
+gap_y 320
+minimum_size 96 5
+maximum_width 96
+default_color B5B5B5 
+
+TEXT
+
+Load:${alignr}${loadavg 3} ${loadavg 1}
+Batt:${alignr}$battery
+${color #292929}${hr 1}${color #B5B5B5}
+CPU${alignr}${freq_dyn_g}Ghz
+${cpu cpu1}% ${cpubar cpu1}
+${cpu cpu2}% ${cpubar cpu2}
+${color #292929}${hr 1}${color #B5B5B5}
+Memory ${alignr}$mem
+${memperc}% $membar
+${color #292929}${hr 1}${color #B5B5B5}
+Network${alignr}eth1
+ip ${alignr}${addr eth1}
+
+Down ${alignr}${downspeedgraph eth1 13,62 }
+Up ${alignr}${upspeedgraph eth1 11,70 }
+New Messages ${color3}${texeci 60 perl ~/scripts/test3.pl} ${color}new mails.
+

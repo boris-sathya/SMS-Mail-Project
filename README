@@ -1,0 +1,2 @@
+## Using Google's POP API in perl, test3.pl checks for required characters in name ad subject if found
+## Uses Gnokii to send a SMS to the user
