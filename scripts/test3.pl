@@ -81,7 +81,7 @@ for($i = $ocount; $i <= $pop->Count(); $i++) {
                     }
  if (($from =~ /searchstring_2_goeshere/i) || ($subj =~ /searchstring_1_goeshere/i))
         {
-         $cmd = "echo Mail from $from regarding $subj  | gnokii --sendsms 9952933081";
+         $cmd = "echo Mail from $from regarding $subj  | gnokii --sendsms phonenumbergoeshere";
          system $cmd;
 
 
